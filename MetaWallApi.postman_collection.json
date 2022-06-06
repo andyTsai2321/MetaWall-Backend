@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "9fb0b692-a5f3-499d-bb80-6b82459a3b47",
+		"name": "MetaWallApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8945316"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWEzNzI1MWI4MmNkNWJiYTkwZTAwNSIsImlhdCI6MTY1NDQyMDkwOSwiZXhwIjoxNjU1MDI1NzA5fQ.IVi-pY946bT-stiSkRAwuEhOOhhzK57CeWBms0Wh-KY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"image\": \"http://abc\",\n    \"content\": \"你好\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"今天要刷牙\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"今天要刷牙\",\n    \"image\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/posts/6291d3aec7b768ee2d7f01f6",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"6291d3aec7b768ee2d7f01f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/posts/62878e6c1ef2a94ca5864b84",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"62878e6c1ef2a94ca5864b84"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"詹姆士\",\n    \"email\": \"asdasdad@test.com\",\n    \"password\": \"wwwwwwwwwww\",\n    \"confirmPassword\": \"wwwwwwwwwww\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"abcabcabc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWEzNzI1MWI4MmNkNWJiYTkwZTAwNSIsImlhdCI6MTY1NDQyMDkwOSwiZXhwIjoxNjU1MDI1NzA5fQ.IVi-pY946bT-stiSkRAwuEhOOhhzK57CeWBms0Wh-KY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"confirmPassword\": \"asdf1234\",\n    \"password\": \"asdf1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/users/updatePassword",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/users",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWEzNzI1MWI4MmNkNWJiYTkwZTAwNSIsImlhdCI6MTY1NDI4MTI4OCwiZXhwIjoxNjU0ODg2MDg4fQ.rTrcRDruMOk7wIih0WYZ0VtBdH9Sd0pZDEjc-CFy8kI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWEzNzI1MWI4MmNkNWJiYTkwZTAwNSIsImlhdCI6MTY1NDI4MTI4OCwiZXhwIjoxNjU0ODg2MDg4fQ.rTrcRDruMOk7wIih0WYZ0VtBdH9Sd0pZDEjc-CFy8kI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"煞氣帥哥\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
