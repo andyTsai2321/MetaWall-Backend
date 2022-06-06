@@ -61,6 +61,19 @@ const user = {
   async profile(req, res, next) {
     handleSuccess(res, req.user);
   },
+  async updateProfile(req, res, next) {
+    const { name, image } = req.body;
+
+    if (!name) {
+      return appError(400, `姓名不可為空`, next);
+    }
+
+    const patchUser = await User.findByIdAndUpdate(req.user.id, {
+      name: name,
+      image: image,
+    });
+    handleSuccess(res, patchUser);
+  },
   async updatePassword(req, res, next) {
     let { password, confirmPassword } = req.body;
     // 密碼不符
