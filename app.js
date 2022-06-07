@@ -7,6 +7,7 @@ const cors = require('cors');
 // router
 var postsRouter = require('./routes/posts');
 var usersRouter = require('./routes/users');
+var uploadRouter = require('./routes/upload');
 
 var app = express();
 require('./connections');
@@ -34,6 +35,7 @@ process.on('unhandledRejection', (reason, promise) => {
 
 app.use('/api/posts', postsRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/upload', uploadRouter);
 
 app.use(function (req, res, next) {
   res.status(404).send({
