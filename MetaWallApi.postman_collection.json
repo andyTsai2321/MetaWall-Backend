@@ -330,6 +330,49 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "upload image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "upload",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWEzNzI1MWI4MmNkNWJiYTkwZTAwNSIsImlhdCI6MTY1NDQyMDkwOSwiZXhwIjoxNjU1MDI1NzA5fQ.IVi-pY946bT-stiSkRAwuEhOOhhzK57CeWBms0Wh-KY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/andytsai/Pictures/unnamed.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://stormy-caverns-28885.herokuapp.com/api/upload",
+					"protocol": "https",
+					"host": [
+						"stormy-caverns-28885",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
